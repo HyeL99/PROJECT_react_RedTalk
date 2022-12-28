@@ -5,7 +5,7 @@
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "start_url": "https://hyel-fruits-talk.netlify.app/",
-  "scope": "https://hyel-vue-todo.netlify.app/",
+  "scope": "https://hyel-fruits-talk.netlify.app/",
   "dir": "ltr",
   "lang":"ko",
   "orientation": "portrait",
