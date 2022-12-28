@@ -1,6 +1,7 @@
 import { deleteDoc, doc } from 'firebase/firestore'
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage'
 import React, { useEffect, useState } from 'react'
+import { BiArrowBack } from 'react-icons/bi'
 import { useDispatch } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import { auth, db, storage } from '../firebase'
@@ -78,7 +79,12 @@ const Setting = () => {
     <div id='settingPage'>
       <div className="contentsWrap">
         <div className="top">
-          <Link to='/home'><button>뒤로가기</button></Link>
+          <Link to='/home'>
+            <button>
+              <BiArrowBack/>
+              <span className="ex">뒤로 가기</span>
+            </button>
+          </Link>
           <h2>설정</h2>
         </div>
         <div className="editProfilePlace">

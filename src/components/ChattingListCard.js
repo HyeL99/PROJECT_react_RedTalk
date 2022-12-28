@@ -32,6 +32,13 @@ const ChattingListCard = ({chatInfo}) => {
   let todayDate = new Date().getDate();
 
   let thisTime = '';
+  if(thisHour>=0 && thisHour<10){
+    thisHour = '0' + thisHour;
+  }
+  if(thisMinute>=0 && thisMinute<10){
+    thisMinute = '0' + thisMinute;
+  }
+
 
   if(thisYear===todayYear && thisMonth===todayMonth && thisDate===todayDate){
     thisTime = `${thisHour}:${thisMinute}`

@@ -19,7 +19,7 @@ const MessageCard = ({messageItem}) => {
   let min = new Date(messageItem.timestamp).getMinutes();
 
   if(hour>=0 && hour<10){
-    min = '0' + min;
+    hour = '0' + hour;
   }
   if(min>=0 && min<10){
     min = '0' + min;
