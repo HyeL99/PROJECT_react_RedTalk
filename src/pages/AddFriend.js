@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import FindFriendCard from '../components/FindFriendCard';
 import './AddFriend.scss'
+import { BiArrowBack } from 'react-icons/bi';
 
 const AddFriend = () => {
   const [searchEmail, setSearchEmail] = useState('');
