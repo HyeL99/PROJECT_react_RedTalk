@@ -3,7 +3,6 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
-//import {getStorage} from 'firebase/database/dist/'
 
 /*=================================
       파이어베이스 세팅
@@ -24,7 +23,6 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
 const storage = getStorage(app);
-//const storage = getStorage(app)
 
 
 export {app, db, auth, storage};
