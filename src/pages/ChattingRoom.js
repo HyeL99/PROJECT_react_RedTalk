@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useSelector } from 'react-redux'
 import { Link, useParams } from 'react-router-dom'
 import ChattingFooter from '../components/ChattingFooter'
@@ -28,6 +28,17 @@ const ChattingRoom = () => {
     }
   })
 
+  const messagesRef = useRef();
+
+  useEffect(()=>{
+    messagesRef.current.scrollTop = messagesRef.current.scrollHeight;
+  },[thisMessageList])
+
+  window.onresize = () => {
+    messagesRef.current.scrollTop = messagesRef.current.scrollHeight;
+  }
+  
+
   return (
     <div id='chatroomPage'>
       <div className="top">
@@ -40,7 +51,7 @@ const ChattingRoom = () => {
         <h2>{chatroomName}</h2>
         {/* <button className='setting'>설정</button> */}
       </div>
-      <div className="chattingPlace scroll">
+      <div className="chattingPlace scroll" ref={messagesRef}>
         {thisMessageList.map((item, index) => <MessageCard messageItem={item} key={index}/>)}
       </div>
       <ChattingFooter />
